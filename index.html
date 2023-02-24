@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ascii-art</title>
+</head>
+<body>
+<div class="container">
+    <div class="">
+        <h2>ASCII ART</h2>
+        <p>Chose image and create ASCII ART</p>
+    </div>
+    <canvas class="canvas" id="canvas"></canvas>
+    <div class="settings">
+        <input type="file" id="file" accept="image/png, image/jpg, image/jpeg">
+        <input type="range" id="range" name="range" min="1" max="20" aria-label="selector">
+    </div>
+    <div class="options">
+        <button type="button" onclick="onClick()" id="copy" hidden="true">Copy</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
