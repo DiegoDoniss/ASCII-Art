@@ -53,9 +53,10 @@ function scanImage(pixelBlock, w, h) {
                 const red = data[pos]
                 const green = data[pos + 1]
                 const blue = data[pos + 2]
-                const averageColor = (red + green + blue) / 3
+                const total = (red + green + blue)
+                const averageColor = total/ 3
                 const color = `rgb(${red},${green},${blue})`
-                const symbol = getSymbol(averageColor)
+                const symbol = total<750?getSymbol(averageColor):' '
                 cell.push({x, y, color, symbol})
                 strImage += symbol
             } else {
